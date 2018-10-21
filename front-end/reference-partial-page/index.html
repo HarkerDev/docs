@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/docs/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/docs/images/favicon.png" type="image/x-icon" />
-    <title> :: Harker Development Docs</title>
+    <title>Referencing a Partial Page :: Harker Development Docs</title>
 
     
     <link href="/docs/css/nucleus.css?1540111235" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/docs/">
+  <body class="" data-url="/docs/front-end/reference-partial-page/">
     <nav id="sidebar" class="">
 
 
@@ -144,7 +144,7 @@
   
     
     <li data-nav-id="/docs/front-end/" title="Front End" class="dd-item 
-        
+        parent
         
         
         ">
@@ -187,7 +187,7 @@
  
   
     
-      <li data-nav-id="/docs/front-end/reference-partial-page/" title="Referencing a Partial Page" class="dd-item ">
+      <li data-nav-id="/docs/front-end/reference-partial-page/" title="Referencing a Partial Page" class="dd-item active">
         <a href="/docs/front-end/reference-partial-page/">
         Referencing a Partial Page
         
@@ -356,25 +356,79 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/docs/'></a> > <a href='/docs/front-end/'>Front End</a> > Referencing a Partial Page
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>Referencing a Partial Page</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
+<p>To reference the partial page <code>views/partials/some-partial.ejs</code> from a page in <code>views/pages</code> in ejs, use the <code>include</code> function as so:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt; Here is some HTML &lt;/<span style="color:#f92672">p</span>&gt;
+<span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;../partials/some-partial.ejs&#39;) %&gt;
+&lt;<span style="color:#f92672">p</span>&gt; Here is some HTML &lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+
+<p>This will replace <code>&lt;%- include('../partials/some-partial.ejs') %&gt;</code> with whatever code is in <code>views/partials/some-partial.ejs</code>.</p>
+
+<p>For more information on working with <code>ejs</code>, <a href="http://ejs.co/">click here</a>.</p>
+
+<p>For information on what the various distributed partials do, [[view this tutorial|<a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Using-the-Various-Partials]">https://github.com/DJMcoder/HarkerDevGuides/wiki/Using-the-Various-Partials]</a>].</p>
 
 
-<h1 id="harker-development-docs">Harker Development Docs</h1>
-
-<p>Welcome to the Harker Development documentation website.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
+
         
         </div> 
         
@@ -457,6 +511,78 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -513,70 +639,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -603,8 +665,10 @@
 
 
         
+            <a class="nav nav-prev" href="/docs/front-end/add-page/" title="Adding a New Page to a Project"> <i class="fas fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/docs/contribution/" title="Contribution" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/docs/front-end/frontend-dev/" title="Front End Dev Practices" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
         
     </div>
 

@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/docs/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/docs/images/favicon.png" type="image/x-icon" />
-    <title> :: Harker Development Docs</title>
+    <title>MongoDB Backup :: Harker Development Docs</title>
 
     
     <link href="/docs/css/nucleus.css?1540111235" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/docs/">
+  <body class="" data-url="/docs/back-end/mongodb-backup/">
     <nav id="sidebar" class="">
 
 
@@ -233,7 +233,7 @@
   
     
     <li data-nav-id="/docs/back-end/" title="Back End" class="dd-item 
-        
+        parent
         
         
         ">
@@ -314,7 +314,7 @@
  
   
     
-      <li data-nav-id="/docs/back-end/mongodb-backup/" title="MongoDB Backup" class="dd-item ">
+      <li data-nav-id="/docs/back-end/mongodb-backup/" title="MongoDB Backup" class="dd-item active">
         <a href="/docs/back-end/mongodb-backup/">
         MongoDB Backup
         
@@ -356,25 +356,133 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/docs/'></a> > <a href='/docs/back-end/'>Back End</a> > MongoDB Backup
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#local-backup">Local Backup</a>
+<ul>
+<li><a href="#creating-a-backup-script">Creating a Backup Script</a></li>
+<li><a href="#scheduling-periodic-script-execution">Scheduling Periodic Script Execution</a>
+<ul>
+<li><a href="#daily-execution">Daily Execution</a></li>
+<li><a href="#weekly-execution">Weekly Execution</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>MongoDB Backup</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="harker-development-docs">Harker Development Docs</h1>
 
-<p>Welcome to the Harker Development documentation website.</p>
+<p>The more backups there are, the better. Thankfully, because of GitHub, we have multiple backups of the code in addition to the code on the server and on our own computers. However, MongoDB needs more work to set up for backups. This tutorial will guide you on how to make a backup procedure for MongoDB.</p>
+
+<h2 id="local-backup">Local Backup</h2>
+
+<p>A local backup is helpful because data can become corrupted or maliciously manipulated while in production. A local backup is a great tool for fixing this because the database can be restored from the local backup. However, this does not protect against total hard drive failure.</p>
+
+<h3 id="creating-a-backup-script">Creating a Backup Script</h3>
+
+<p>In your home folder, create a script titled <code>backup</code> by entering the following command:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano backup</code></pre></div>
+
+<p>After creating the file, append the following commands to it (replace <code>&lt;database&gt;</code> with the database you are using):</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">NOW<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d_%H:%M:%S<span style="color:#66d9ef">)</span>
+mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb</code></pre></div>
+
+<p>Then save the file (if using <code>nano</code> press control+x). Then, in your shell, give yourself permission to run it:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod <span style="color:#ae81ff">500</span> ~/backup</code></pre></div>
+
+<p>To execute the script, run the following command:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/backup</code></pre></div>
+
+<h3 id="scheduling-periodic-script-execution">Scheduling Periodic Script Execution</h3>
+
+<p>Although the <code>backup</code> script can be run manually, it would be more efficient for the script to run automatically. To schedule a periodic execution of the script, first run the following command:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crontab -e</code></pre></div>
+
+<p>Then scroll your cursor to the bottom of the file. Add a new line after the comments (comments start with #). Once you add the line, save the file by pressing control+x. Different periods are defined below, but you can also read <a href="https://www.computerhope.com/unix/ucrontab.htm">this in-depth guide</a> on crontab.</p>
+
+<h4 id="daily-execution">Daily Execution</h4>
+
+<p>To add a daily execution at midnight, add the following line to the file (replace <code>&lt;userfolder&gt;</code> with your username):</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * * /home/&lt;userfolder&gt;/backup</code></pre></div>
+
+<p><br></p>
+
+<h4 id="weekly-execution">Weekly Execution</h4>
+
+<p>To add a weekly execution on Sunday at midnight, add the following line to the file (replace <code>&lt;userfolder&gt;</code> with your username):</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * <span style="color:#ae81ff">0</span> /home/&lt;userfolder&gt;/backup</code></pre></div>
+
+<p><br><br></p>
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
+
         
         </div> 
         
@@ -521,6 +629,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -528,6 +637,25 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -566,21 +694,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -603,8 +716,10 @@
 
 
         
+            <a class="nav nav-prev" href="/docs/back-end/setting-up-a-server/" title="Setting Up A Server"> <i class="fas fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/docs/contribution/" title="Contribution" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with MongoDB Compass" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
         
     </div>
 
