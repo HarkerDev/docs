@@ -12,12 +12,22 @@
     
     
     <item>
-      <title>Github</title>
+      <title>GitHub Contributions</title>
       <link>https://harkerdev.github.io/docs/contribution/github/</link>
-      <pubDate>Sat, 20 Oct 2018 22:23:34 -0500</pubDate>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://harkerdev.github.io/docs/contribution/github/</guid>
-      <description> Github contribution </description>
+      <description>GitHub All of our open-source development is on GitHub, where contricutors can suggest new features, report bugs, and also contribute to our code base. This guide serves as a guideline to interacting with our GitHub organization.</description>
+    </item>
+    
+    <item>
+      <title>Developing a Project</title>
+      <link>https://harkerdev.github.io/docs/contribution/creating-mainting-project/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://harkerdev.github.io/docs/contribution/creating-mainting-project/</guid>
+      <description>Creating a HarkerDev project requires more than simply writing the code. This tutorial summarizes the steps to fully creating a official, Harker-recognized HarkerDev project.
+Phase 1: Authorization Step 1: Define Project Function Once the Administration approves the idea of the project, the function of the project must be clearly defined. The idea of a project is different from its defined function. For example, the function of the Course Planner project was streamlining the course planning process.</description>
     </item>
     
   </channel>
