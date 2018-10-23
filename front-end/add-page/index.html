@@ -9,22 +9,22 @@
 
     <link rel="shortcut icon" href="/docs/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/docs/images/favicon.png" type="image/x-icon" />
-    <title>Adding a New Page to a Project :: Harker Development Docs</title>
+    <title>Adding a Page to Node.js Apps :: Harker Development Docs</title>
 
     
-    <link href="/docs/css/nucleus.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/fontawesome-all.min.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/hybrid.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/featherlight.min.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/perfect-scrollbar.min.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/auto-complete.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/theme.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/hugo-theme.css?1540111235" rel="stylesheet">
+    <link href="/docs/css/nucleus.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/fontawesome-all.min.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/hybrid.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/featherlight.min.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/perfect-scrollbar.min.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/auto-complete.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/theme.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/hugo-theme.css?1540323696" rel="stylesheet">
     
-      <link href="/docs/css/theme-green.css?1540111235" rel="stylesheet">
+      <link href="/docs/css/theme-green.css?1540323696" rel="stylesheet">
     
 
-    <script src="/docs/js/jquery-2.x.min.js?1540111235"></script>
+    <script src="/docs/js/jquery-2.x.min.js?1540323696"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -41,7 +41,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <img src="/static/img/logo.png"/>
+      <img src="/docs/static/img/logo.png"/>
     </div>
     
         <div class="searchbox">
@@ -50,14 +50,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/docs/js/lunr.min.js?1540111235"></script>
-<script type="text/javascript" src="/docs/js/auto-complete.js?1540111235"></script>
+<script type="text/javascript" src="/docs/js/lunr.min.js?1540323696"></script>
+<script type="text/javascript" src="/docs/js/auto-complete.js?1540323696"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harkerdev.github.io\/docs\/";
     
 </script>
-<script type="text/javascript" src="/docs/js/search.js?1540111235"></script>
+<script type="text/javascript" src="/docs/js/search.js?1540323696"></script>
 
     
   </div>
@@ -168,9 +168,9 @@
  
   
     
-      <li data-nav-id="/docs/front-end/add-page/" title="Adding a New Page to a Project" class="dd-item active">
+      <li data-nav-id="/docs/front-end/add-page/" title="Adding a Page to Node.js Apps" class="dd-item active">
         <a href="/docs/front-end/add-page/">
-        Adding a New Page to a Project
+        Adding a Page to Node.js Apps
         
         </a>
     </li>
@@ -206,9 +206,9 @@
  
   
     
-      <li data-nav-id="/docs/front-end/frontend-dev/" title="Front End Dev Practices" class="dd-item ">
+      <li data-nav-id="/docs/front-end/frontend-dev/" title="Front End Development Practices" class="dd-item ">
         <a href="/docs/front-end/frontend-dev/">
-        Front End Dev Practices
+        Front End Development Practices
         
         </a>
     </li>
@@ -257,9 +257,9 @@
  
   
     
-      <li data-nav-id="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with MongoDB Compass" class="dd-item ">
+      <li data-nav-id="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with Compass" class="dd-item ">
         <a href="/docs/back-end/mongodb-access-with-compass/">
-        Access MongoDB with MongoDB Compass
+        Access MongoDB with Compass
         
         </a>
     </li>
@@ -342,8 +342,9 @@
 
     
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
-
+      <center>
+    <p>Built by The Harker Development Team</p>
+</center>
     </section>
   </div>
 </nav>
@@ -381,7 +382,7 @@
             
           
           
-            <a href='/docs/'></a> > <a href='/docs/front-end/'>Front End</a> > Adding a New Page to a Project
+            <a href='/docs/'></a> > <a href='/docs/front-end/'>Front End</a> > Adding a Page to Node.js Apps
           
          
           
@@ -420,7 +421,7 @@
         
         <div id="body-inner">
           
-            <h1>Adding a New Page to a Project</h1>
+            <h1>Adding a Page to Node.js Apps</h1>
           
 
         
@@ -436,67 +437,73 @@
 
 <p>First, add the following code to the top of your page:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en-US&#34;</span>&gt;
-  &lt;<span style="color:#f92672">head</span>&gt;
-    <span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;../partials/head.ejs&#39;) %&gt;
-    &lt;<span style="color:#f92672">title</span>&gt; Title &lt;/<span style="color:#f92672">title</span>&gt;
-  &lt;/<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">body</span>&gt;</code></pre></div>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+  &lt;head&gt;
+    &lt;%- include('../partials/head.ejs') %&gt;
+    &lt;title&gt; Title &lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+</code></pre>
 
 <p>If you want to add in a stylesheet, favicon, or <code>&lt;meta&gt;</code> tag, you would put it here in between the <code>&lt;head&gt;&lt;/head&gt;</code> tags.</p>
 
 <h3 id="referencing-partials">Referencing Partials</h3>
 
-<p>For information on how to reference a partial, [[view this tutorial|<a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Referencing-a-Partial-Page]">https://github.com/DJMcoder/HarkerDevGuides/wiki/Referencing-a-Partial-Page]</a>].</p>
+<p>For information on how to reference a partial, <a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Referencing-a-Partial-Page">view this tutorial</a>.</p>
 
-<p>For information on what the various partials do, [[view this tutorial|<a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Using-the-Various-Partials]">https://github.com/DJMcoder/HarkerDevGuides/wiki/Using-the-Various-Partials]</a>].</p>
+<p>For information on what the various partials do, <a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Using-the-Various-Partials">view this tutorial</a>.</p>
 
 <p>There are three main partial pages to include. The first is the navbar, which usually is the first thing after the <code>&lt;body&gt;</code> tag. You would include it as so:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;../partials/navbar.ejs&#39;) %&gt;</code></pre></div>
+<pre><code class="language-html">&lt;%- include('../partials/navbar.ejs') %&gt;
+</code></pre>
 
 <p>Then, there is the loader partial, which includes tools on making a full-screen page loader using [[materializecss&rsquo; preloader tool|<a href="http://materializecss.com/preloader.html]">http://materializecss.com/preloader.html]</a>]. If you want to use the tools, include them as so:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;../partials/loader.ejs&#39;) %&gt;</code></pre></div>
+<pre><code class="language-html">&lt;%- include('../partials/loader.ejs') %&gt;
+</code></pre>
 
 <p>Finally, there is the orientation partial. This partial will force any mobile user to tilt their screen horizontally. To use it, include it as so:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;../partials/orientation.ejs&#39;) %&gt;</code></pre></div>
+<pre><code class="language-html">&lt;%- include('../partials/orientation.ejs') %&gt;
+</code></pre>
 
 <h3 id="adding-your-own-code">Adding your own code</h3>
 
 <p>Add whatever page content that the page is intended to have. Note that the head include give you access to materializecss and jquery.</p>
 
-<p>For information on how to use materializecss, [[view their website|<a href="http://materializecss.com/]">http://materializecss.com/]</a>].</p>
+<p>For information on how to use materializecss, <a href="http://materializecss.com/">view their website</a>.</p>
 
-<p>For information on how to use jquery, [[view their documentation|<a href="http://api.jquery.com/]">http://api.jquery.com/]</a>].</p>
+<p>For information on how to use jquery, <a href="http://api.jquery.com/">view their documentation</a>.</p>
 
-<p>In terms of code structure, [[view our tutorial on front-end coding structure and style|<a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Front-End-Coding-Practices]">https://github.com/DJMcoder/HarkerDevGuides/wiki/Front-End-Coding-Practices]</a>].</p>
+<p>In terms of code structure, <a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Front-End-Coding-Practices">view our tutorial on front-end coding structure and style</a>.</p>
 
 <h3 id="closing-the-page">Closing the page</h3>
 
 <p>Close the <code>&lt;body&gt;</code> and <code>&lt;html&gt;</code> tags as so:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<pre><code class="language-html">  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 <h2 id="adding-your-page-to-the-navbar">Adding your page to the navbar</h2>
 
 <p>In <code>views/partials/navbar.ejs</code>, in both the <code>ul.side-nav</code> and the main <code>&lt;ul&gt;</code>, add a <code>&lt;li&gt;</code> with an <code>&lt;a&gt;</code> inside it, linking to the page you just made, as so:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">nav</span>&gt;
-  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-wrapper&#34;</span>&gt;
-      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;brand-logo&#34;</span>&gt;HarkerDev&lt;/<span style="color:#f92672">a</span>&gt;
-      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#&#34;</span> <span style="color:#a6e22e">data-activates</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mobile-demo&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button-collapse&#34;</span>&gt;&lt;<span style="color:#f92672">i</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;material-icons&#34;</span>&gt;menu&lt;/<span style="color:#f92672">i</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
-      &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;right hide-on-med-and-down&#34;</span>&gt;
-        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/page&#34;</span>&gt;Page&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;/<span style="color:#f92672">ul</span>&gt;
-      &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;side-nav&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mobile-demo&#34;</span>&gt;
-        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/page&#34;</span>&gt;Page&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;/<span style="color:#f92672">ul</span>&gt;
-    &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">nav</span>&gt;</code></pre></div>
+<pre><code class="language-html">&lt;nav&gt;
+  &lt;div class=&quot;nav-wrapper&quot;&gt;
+      &lt;a href=&quot;/&quot; class=&quot;brand-logo&quot;&gt;HarkerDev&lt;/a&gt;
+      &lt;a href=&quot;#&quot; data-activates=&quot;mobile-demo&quot; class=&quot;button-collapse&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;menu&lt;/i&gt;&lt;/a&gt;
+      &lt;ul class=&quot;right hide-on-med-and-down&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;/page&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class=&quot;side-nav&quot; id=&quot;mobile-demo&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;/page&quot;&gt;Page&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
 
 <p>For more information on the navbar, [[view the materializecss tutorial on navbars|<a href="http://materializecss.com/navbar.html]">http://materializecss.com/navbar.html]</a>].</p>
 
@@ -506,8 +513,6 @@
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/page&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; { <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#39;pages/page.ejs&#39;</span>) })
 </code></pre></div>
-
-<p><br><br></p>
 
 
 <footer class=" footline" >
@@ -760,20 +765,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/docs/js/clipboard.min.js?1540111235"></script>
-    <script src="/docs/js/perfect-scrollbar.min.js?1540111235"></script>
-    <script src="/docs/js/perfect-scrollbar.jquery.min.js?1540111235"></script>
-    <script src="/docs/js/jquery.sticky.js?1540111235"></script>
-    <script src="/docs/js/featherlight.min.js?1540111235"></script>
-    <script src="/docs/js/html5shiv-printshiv.min.js?1540111235"></script>
-    <script src="/docs/js/highlight.pack.js?1540111235"></script>
+    <script src="/docs/js/clipboard.min.js?1540323696"></script>
+    <script src="/docs/js/perfect-scrollbar.min.js?1540323696"></script>
+    <script src="/docs/js/perfect-scrollbar.jquery.min.js?1540323696"></script>
+    <script src="/docs/js/jquery.sticky.js?1540323696"></script>
+    <script src="/docs/js/featherlight.min.js?1540323696"></script>
+    <script src="/docs/js/html5shiv-printshiv.min.js?1540323696"></script>
+    <script src="/docs/js/highlight.pack.js?1540323696"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/docs/js/modernizr.custom.71422.js?1540111235"></script>
-    <script src="/docs/js/learn.js?1540111235"></script>
-    <script src="/docs/js/hugo-learn.js?1540111235"></script>
+    <script src="/docs/js/modernizr.custom.71422.js?1540323696"></script>
+    <script src="/docs/js/learn.js?1540323696"></script>
+    <script src="/docs/js/hugo-learn.js?1540323696"></script>
 
-    <link href="/docs/mermaid/mermaid.css?1540111235" type="text/css" rel="stylesheet" />
-    <script src="/docs/mermaid/mermaid.js?1540111235"></script>
+    <link href="/docs/mermaid/mermaid.css?1540323696" type="text/css" rel="stylesheet" />
+    <script src="/docs/mermaid/mermaid.js?1540323696"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

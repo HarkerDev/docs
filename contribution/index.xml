@@ -17,7 +17,9 @@
       <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://harkerdev.github.io/docs/contribution/github/</guid>
-      <description>GitHub All of our open-source development is on GitHub, where contricutors can suggest new features, report bugs, and also contribute to our code base. This guide serves as a guideline to interacting with our GitHub organization.</description>
+      <description>GitHub All of our open-source development is on GitHub, where contricutors can suggest new features, report bugs, and also contribute to our code base. This guide serves as a guideline to interacting with our GitHub organization.
+Contributions Commits Each commit is an important part of the history of the project development. For each commit, make sure that
+ Commit message begins with a capital letter Commit message is in past tense Commit message does not end in a period Contains a substantial code change (in other words, don&amp;rsquo;t commit for a typo)  Pull Requests Open a pull request to one of our repositories if you have made chances to the code base that you believe should be implemented into the production branch.</description>
     </item>
     
     <item>

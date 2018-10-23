@@ -12,19 +12,19 @@
     <title>MongoDB Backup :: Harker Development Docs</title>
 
     
-    <link href="/docs/css/nucleus.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/fontawesome-all.min.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/hybrid.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/featherlight.min.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/perfect-scrollbar.min.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/auto-complete.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/theme.css?1540111235" rel="stylesheet">
-    <link href="/docs/css/hugo-theme.css?1540111235" rel="stylesheet">
+    <link href="/docs/css/nucleus.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/fontawesome-all.min.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/hybrid.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/featherlight.min.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/perfect-scrollbar.min.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/auto-complete.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/theme.css?1540323696" rel="stylesheet">
+    <link href="/docs/css/hugo-theme.css?1540323696" rel="stylesheet">
     
-      <link href="/docs/css/theme-green.css?1540111235" rel="stylesheet">
+      <link href="/docs/css/theme-green.css?1540323696" rel="stylesheet">
     
 
-    <script src="/docs/js/jquery-2.x.min.js?1540111235"></script>
+    <script src="/docs/js/jquery-2.x.min.js?1540323696"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -41,7 +41,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <img src="/static/img/logo.png"/>
+      <img src="/docs/static/img/logo.png"/>
     </div>
     
         <div class="searchbox">
@@ -50,14 +50,14 @@
     <span data-search-clear=""><i class="fas fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/docs/js/lunr.min.js?1540111235"></script>
-<script type="text/javascript" src="/docs/js/auto-complete.js?1540111235"></script>
+<script type="text/javascript" src="/docs/js/lunr.min.js?1540323696"></script>
+<script type="text/javascript" src="/docs/js/auto-complete.js?1540323696"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/harkerdev.github.io\/docs\/";
     
 </script>
-<script type="text/javascript" src="/docs/js/search.js?1540111235"></script>
+<script type="text/javascript" src="/docs/js/search.js?1540323696"></script>
 
     
   </div>
@@ -168,9 +168,9 @@
  
   
     
-      <li data-nav-id="/docs/front-end/add-page/" title="Adding a New Page to a Project" class="dd-item ">
+      <li data-nav-id="/docs/front-end/add-page/" title="Adding a Page to Node.js Apps" class="dd-item ">
         <a href="/docs/front-end/add-page/">
-        Adding a New Page to a Project
+        Adding a Page to Node.js Apps
         
         </a>
     </li>
@@ -206,9 +206,9 @@
  
   
     
-      <li data-nav-id="/docs/front-end/frontend-dev/" title="Front End Dev Practices" class="dd-item ">
+      <li data-nav-id="/docs/front-end/frontend-dev/" title="Front End Development Practices" class="dd-item ">
         <a href="/docs/front-end/frontend-dev/">
-        Front End Dev Practices
+        Front End Development Practices
         
         </a>
     </li>
@@ -257,9 +257,9 @@
  
   
     
-      <li data-nav-id="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with MongoDB Compass" class="dd-item ">
+      <li data-nav-id="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with Compass" class="dd-item ">
         <a href="/docs/back-end/mongodb-access-with-compass/">
-        Access MongoDB with MongoDB Compass
+        Access MongoDB with Compass
         
         </a>
     </li>
@@ -342,8 +342,9 @@
 
     
     <section id="footer">
-      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
-
+      <center>
+    <p>Built by The Harker Development Team</p>
+</center>
     </section>
   </div>
 </nav>
@@ -438,26 +439,31 @@
 
 <p>In your home folder, create a script titled <code>backup</code> by entering the following command:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano backup</code></pre></div>
+<pre><code class="language-bash">nano backup
+</code></pre>
 
 <p>After creating the file, append the following commands to it (replace <code>&lt;database&gt;</code> with the database you are using):</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">NOW<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%Y-%m-%d_%H:%M:%S<span style="color:#66d9ef">)</span>
-mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb</code></pre></div>
+<pre><code class="language-ash">NOW=$(date +%Y-%m-%d_%H:%M:%S)
+mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb
+</code></pre>
 
 <p>Then save the file (if using <code>nano</code> press control+x). Then, in your shell, give yourself permission to run it:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod <span style="color:#ae81ff">500</span> ~/backup</code></pre></div>
+<pre><code class="language-bash">sudo chmod 500 ~/backup
+</code></pre>
 
 <p>To execute the script, run the following command:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/backup</code></pre></div>
+<pre><code class="language-bash">~/backup
+</code></pre>
 
 <h3 id="scheduling-periodic-script-execution">Scheduling Periodic Script Execution</h3>
 
 <p>Although the <code>backup</code> script can be run manually, it would be more efficient for the script to run automatically. To schedule a periodic execution of the script, first run the following command:</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crontab -e</code></pre></div>
+<pre><code class="language-bash">crontab -e
+</code></pre>
 
 <p>Then scroll your cursor to the bottom of the file. Add a new line after the comments (comments start with #). Once you add the line, save the file by pressing control+x. Different periods are defined below, but you can also read <a href="https://www.computerhope.com/unix/ucrontab.htm">this in-depth guide</a> on crontab.</p>
 
@@ -465,17 +471,15 @@ mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb</code></pre></div>
 
 <p>To add a daily execution at midnight, add the following line to the file (replace <code>&lt;userfolder&gt;</code> with your username):</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * * /home/&lt;userfolder&gt;/backup</code></pre></div>
-
-<p><br></p>
+<pre><code class="language-bash">0 0 * * * /home/&lt;userfolder&gt;/backup
+</code></pre>
 
 <h4 id="weekly-execution">Weekly Execution</h4>
 
 <p>To add a weekly execution on Sunday at midnight, add the following line to the file (replace <code>&lt;userfolder&gt;</code> with your username):</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * <span style="color:#ae81ff">0</span> /home/&lt;userfolder&gt;/backup</code></pre></div>
-
-<p><br><br></p>
+<pre><code class="language-ash">0 0 * * 0 /home/&lt;userfolder&gt;/backup
+</code></pre>
 
 
 <footer class=" footline" >
@@ -719,7 +723,7 @@ mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb</code></pre></div>
             <a class="nav nav-prev" href="/docs/back-end/setting-up-a-server/" title="Setting Up A Server"> <i class="fas fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with MongoDB Compass" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/docs/back-end/mongodb-access-with-compass/" title="Access MongoDB with Compass" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
         
     </div>
 
@@ -728,20 +732,20 @@ mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/docs/js/clipboard.min.js?1540111235"></script>
-    <script src="/docs/js/perfect-scrollbar.min.js?1540111235"></script>
-    <script src="/docs/js/perfect-scrollbar.jquery.min.js?1540111235"></script>
-    <script src="/docs/js/jquery.sticky.js?1540111235"></script>
-    <script src="/docs/js/featherlight.min.js?1540111235"></script>
-    <script src="/docs/js/html5shiv-printshiv.min.js?1540111235"></script>
-    <script src="/docs/js/highlight.pack.js?1540111235"></script>
+    <script src="/docs/js/clipboard.min.js?1540323696"></script>
+    <script src="/docs/js/perfect-scrollbar.min.js?1540323696"></script>
+    <script src="/docs/js/perfect-scrollbar.jquery.min.js?1540323696"></script>
+    <script src="/docs/js/jquery.sticky.js?1540323696"></script>
+    <script src="/docs/js/featherlight.min.js?1540323696"></script>
+    <script src="/docs/js/html5shiv-printshiv.min.js?1540323696"></script>
+    <script src="/docs/js/highlight.pack.js?1540323696"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/docs/js/modernizr.custom.71422.js?1540111235"></script>
-    <script src="/docs/js/learn.js?1540111235"></script>
-    <script src="/docs/js/hugo-learn.js?1540111235"></script>
+    <script src="/docs/js/modernizr.custom.71422.js?1540323696"></script>
+    <script src="/docs/js/learn.js?1540323696"></script>
+    <script src="/docs/js/hugo-learn.js?1540323696"></script>
 
-    <link href="/docs/mermaid/mermaid.css?1540111235" type="text/css" rel="stylesheet" />
-    <script src="/docs/mermaid/mermaid.js?1540111235"></script>
+    <link href="/docs/mermaid/mermaid.css?1540323696" type="text/css" rel="stylesheet" />
+    <script src="/docs/mermaid/mermaid.js?1540323696"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

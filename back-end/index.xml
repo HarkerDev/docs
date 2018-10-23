@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Access MongoDB with MongoDB Compass</title>
+      <title>Access MongoDB with Compass</title>
       <link>https://harkerdev.github.io/docs/back-end/mongodb-access-with-compass/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -30,7 +30,7 @@ Compass Then, [[install MongoDB Compass|https://www.mongodb.com/download-center?
       <guid>https://harkerdev.github.io/docs/back-end/test-files-database/</guid>
       <description>Testing often requires a populated database to work with. This tutorial explains how to write a write scripts which populate the database with test documents specified in files you will create.
 Setup Make sure that MongoDB is set up and mongod is running. Review the structure of your collections. For this tutorial, we will be using users as our example, with the following schema:
-const mongoose = require(&amp;#39;../db&amp;#39;); // Format of the mongoDB collection const userSchema = mongoose.</description>
+const mongoose = require(&#39;../db&#39;); // Format of the mongoDB collection const userSchema = mongoose.</description>
     </item>
     
     <item>
