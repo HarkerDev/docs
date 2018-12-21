@@ -11,11 +11,11 @@ HarkerDev projects often (if not always) use MongoDB as the main database system
 
 ### MongoDB
 
-First, make sure that mongodb is installed and running `mongod` on the device you wish to connect to. This setup is detailed in our guide on [[Setting Up a Server|https://harkerdev.github.io/backend/setting-up-a-server]].
+First, make sure that mongodb is installed and running `mongod` on the device you wish to connect to. This setup is detailed in our guide on [Setting Up a Server](https://harkerdev.github.io/backend/setting-up-a-server).
 
 ### Compass
 
-Then, [[install MongoDB Compass|https://www.mongodb.com/download-center?filter=enterprise#compass]] on the device you are using to connect.
+Then, [install MongoDB Compass](https://www.mongodb.com/download-center?filter=enterprise#compass) on the device you are using to connect.
 
 ## Using MongoDB Compass
 
@@ -61,7 +61,7 @@ Under the database you are connected to, a list of collections should appear. To
 
 #### Filtering a Collection
 
-To filter a collection, use the filter at the top of the GUI. MongoDB has [[their own tutorial|https://docs.mongodb.com/v3.2/tutorial/query-documents/]] on queries, but here are a few examples:
+To filter a collection, use the filter at the top of the GUI. MongoDB has [their own tutorial](https://docs.mongodb.com/v3.2/tutorial/query-documents/) on queries, but here are a few examples:
 
 ##### Syntax
 
@@ -73,7 +73,7 @@ To filter the collection to documents that only have a property with a certain v
 
 ##### `or` Query
 
-To have a filter which queries documents which *EITHER* have `property1` set to `value1` *OR* `property2` set to `value2`, use the query: 
+To have a filter which queries documents which *EITHER* have `property1` set to `value1` *OR* `property2` set to `value2`, use the query:
 
 ````json
 { $or: [
@@ -84,7 +84,7 @@ To have a filter which queries documents which *EITHER* have `property1` set to 
 
 ##### `and` Query
 
-To have a filter which queries documents which *BOTH* have `property1` set to `value1` *AND* `property2` set to `value2`, use the query: 
+To have a filter which queries documents which *BOTH* have `property1` set to `value1` *AND* `property2` set to `value2`, use the query:
 
 ````json
 { $and: [
@@ -107,9 +107,9 @@ Once documents are filtered, you can hover over a document for options (in the t
 
 ##### Editing a fields
 
-When editing a document, Compass allows allows you to modify fields. When hovering over a field, you can click on the value to allow you to edit that field. 
+When editing a document, Compass allows allows you to modify fields. When hovering over a field, you can click on the value to allow you to edit that field.
 
-##### Adding/removing fields 
+##### Adding/removing fields
 
 To delete a field, click the 'x' icon on the left side of the row. To add a field, click on the '+' icon on the left side of any row to add a field after it.
 

@@ -293,11 +293,11 @@
         <div class="page-content">
           <p>The more backups there are, the better. Thankfully, because of GitHub, we have multiple backups of the code in addition to the code on the server and on our own computers. However, MongoDB needs more work to set up for backups. This tutorial will guide you on how to make a backup procedure for MongoDB.</p>
 
-<h2 id="local-backup">Local Backup</h2>
+<h1 id="local-backup">Local Backup</h1>
 
 <p>A local backup is helpful because data can become corrupted or maliciously manipulated while in production. A local backup is a great tool for fixing this because the database can be restored from the local backup. However, this does not protect against total hard drive failure.</p>
 
-<h3 id="creating-a-backup-script">Creating a Backup Script</h3>
+<h2 id="creating-a-backup-script">Creating a Backup Script</h2>
 
 <p>In your home folder, create a script titled <code class="highlighter-rouge">backup</code> by entering the following command:</p>
 
@@ -320,7 +320,7 @@ mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/backup
 </code></pre></div></div>
 
-<h3 id="scheduling-periodic-script-execution">Scheduling Periodic Script Execution</h3>
+<h2 id="scheduling-periodic-script-execution">Scheduling Periodic Script Execution</h2>
 
 <p>Although the <code class="highlighter-rouge">backup</code> script can be run manually, it would be more efficient for the script to run automatically. To schedule a periodic execution of the script, first run the following command:</p>
 
@@ -329,14 +329,14 @@ mongodump -d &lt;database&gt; -o ~/backups/$NOW.mdb
 
 <p>Then scroll your cursor to the bottom of the file. Add a new line after the comments (comments start with #). Once you add the line, save the file by pressing control+x. Different periods are defined below, but you can also read <a href="https://www.computerhope.com/unix/ucrontab.htm">this in-depth guide</a> on crontab.</p>
 
-<h4 id="daily-execution">Daily Execution</h4>
+<h3 id="daily-execution">Daily Execution</h3>
 
 <p>To add a daily execution at midnight, add the following line to the file (replace <code class="highlighter-rouge">&lt;userfolder&gt;</code> with your username):</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 0 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> /home/&lt;userfolder&gt;/backup
 </code></pre></div></div>
 
-<h4 id="weekly-execution">Weekly Execution</h4>
+<h3 id="weekly-execution">Weekly Execution</h3>
 
 <p>To add a weekly execution on Sunday at midnight, add the following line to the file (replace <code class="highlighter-rouge">&lt;userfolder&gt;</code> with your username):</p>
 
