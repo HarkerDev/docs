@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Populate Database w/ Test Files - Harker Dev Documentation</title>
+  <link rel="stylesheet" href="http://localhost:4000/docs/assets/css/just-the-docs.css">
+  
+  <script type="text/javascript" src="http://localhost:4000/docs/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/docs/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <a href="http://localhost:4000/docs" class="site-title fs-6 lh-tight">Harker Dev Documentation</a>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <div class="navigation main-nav js-main-nav">
+        <nav>
+  <ul class="navigation-list">
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/" class="navigation-list-link">Home</a>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/contribution" class="navigation-list-link">Contribution</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/contribution/github/" class="navigation-list-link">GitHub Contributions</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/contribution/creating-mainting-project/" class="navigation-list-link">Developing a Project</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/frontend" class="navigation-list-link">Front End Development</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/add-page/" class="navigation-list-link">Adding a Page to Node.js Apps</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/reference-partial-page/" class="navigation-list-link">Referencing a Partial Page</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/frontend-dev/" class="navigation-list-link">Front End Development Practices</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item active">
+            
+            <a href="http://localhost:4000/docs/backend" class="navigation-list-link">Back End Development</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/mongodb-access-with-compass/" class="navigation-list-link">Access MongoDB with Compass</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item  active">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/test-files-database/" class="navigation-list-link active">Populate Database w/ Test Files</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/setting-up-a-server/" class="navigation-list-link">Setting Up A Server</a>
+                      
+                    </li>
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/mongodb-backup/" class="navigation-list-link">MongoDB Backup</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+  </ul>
+</nav>
+
+      </div>
+      <footer role="contentinfo" class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-0">Feel free to reach out to us at <a href="mailto:dev@harker.org">dev@harker.org</a>.</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap">
+      <div class="page-header">
+        <div class="main-content">
+          
+          <div class="search js-search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" placeholder="Search Harker Dev Documentation" aria-label="Search Harker Dev Documentation" autocomplete="off">
+              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+            <ul class="list-style-none text-small mt-md-1 mb-md-1 pb-4 pb-md-0 js-aux-nav aux-nav">
+              
+                <li class="d-inline-block my-0"><a href="//github.com/harkerdev">View our Organization on Github</a></li>
+              
+            </ul>
+          
+        </div>
+      </div>
+      <div class="main-content">
+        
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                  <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/docs/backend">Back End Development</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><span>Populate Database w/ Test Files</span></li>
+              </ol>
+            </nav>
+          
+        
+        <div class="page-content">
+          <p>Testing often requires a populated database to work with. This tutorial explains how to write a write scripts which populate the database with test documents specified in files you will create.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Make sure that MongoDB is set up and <code class="highlighter-rouge">mongod</code> is running. Review the structure of your collections. For this tutorial, we will be using users as our example, with the following schema:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">const</span><span class="w"> </span><span class="err">mongoose</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">require('../db');</span><span class="w">
+
+</span><span class="err">//</span><span class="w"> </span><span class="err">Format</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">mongoDB</span><span class="w"> </span><span class="err">collection</span><span class="w">
+</span><span class="err">const</span><span class="w"> </span><span class="err">userSchema</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">mongoose.Schema(</span><span class="p">{</span><span class="w">
+  </span><span class="err">fullName</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="err">String</span><span class="p">,</span><span class="w">
+    </span><span class="err">required</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="err">username</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">type</span><span class="p">:</span><span class="w"> </span><span class="err">String</span><span class="p">,</span><span class="w">
+    </span><span class="err">required</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="err">index</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">unique</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">}</span><span class="err">);</span><span class="w">
+
+</span><span class="err">//</span><span class="w"> </span><span class="err">Creating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">mongoose</span><span class="w"> </span><span class="err">model</span><span class="w">
+</span><span class="err">const</span><span class="w"> </span><span class="err">User</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">mongoose.model('User'</span><span class="p">,</span><span class="w"> </span><span class="err">userSchema);</span><span class="w">
+
+</span><span class="err">module.exports</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">User;</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="creating-db-test-files">Creating DB Test files</h2>
+
+<p>In your repository folder, create a new folder titled <code class="highlighter-rouge">DatabaseTestFiles</code>. In this folder, create a new file called <code class="highlighter-rouge">UserTest.json</code>. Line by line, create a new instance of a user. Here is an example:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s2">"fullName"</span><span class="p">:</span><span class="s2">"John Doe"</span><span class="p">,</span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"19johnd"</span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="s2">"fullName"</span><span class="p">:</span><span class="s2">"Mary Molly"</span><span class="p">,</span><span class="s2">"username"</span><span class="p">:</span><span class="s2">"17marym"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note the lack of commas between objects.</p>
+
+<h3 id="a-note-on-implementation">A Note on Implementation</h3>
+
+<p>We are only using a model with two String fields. More models and fields could be added in the same fashion. If a reference field is added, there are two possibilities that could be implemented. The first would be to generate the ids in the database test files, and then reference those ids them in the other document. The other would be to generate documents for both collections separately, then randomly pair them together (depending on the direction of the reference).</p>
+
+<h2 id="creating-scripts">Creating scripts</h2>
+
+<p>If it does not already exist, add a folder to your repository folder titled <code class="highlighter-rouge">scripts</code>.</p>
+
+<h3 id="unpopulate-script">Unpopulate script</h3>
+
+<p>In your <code class="highlighter-rouge">scripts</code> folder, add a file titled <code class="highlighter-rouge">unpopulate.js</code>.
+Add the following <code class="highlighter-rouge">require</code> block to the beginning of your code:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'readline'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../db'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../models/user'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>If you were to add another model to the populate script, you would add its <code class="highlighter-rouge">require</code> reference here.
+Then, add the <code class="highlighter-rouge">parseUsers</code> function.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">parseUsers</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">mongoTransactions</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">const</span> <span class="nx">userRl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span>
+      <span class="na">input</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">__dirname</span><span class="p">}</span><span class="s2">/../DatabaseTestFiles/UserTest.json`</span><span class="p">),</span>
+    <span class="p">});</span>
+    <span class="nx">userRl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'line'</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">mongoTransactions</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+        <span class="nx">User</span><span class="p">.</span><span class="nx">findOne</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+          <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">user</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">user</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">`User ith username </span><span class="p">${</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">username</span><span class="p">}</span><span class="s2"> does not exist`</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nx">user</span><span class="p">;</span>
+          <span class="p">})</span>
+          <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">remove</span><span class="p">())</span>
+          <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Removed user with username </span><span class="p">${</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">username</span><span class="p">}</span><span class="s2">`</span><span class="p">))</span>
+          <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Error removing user from database: </span><span class="p">${</span><span class="nx">err</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+          <span class="p">})</span>
+      <span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">userRl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'close'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">mongoTransactions</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">resolve</span><span class="p">)</span>
+        <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">reject</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you wanted to reference another model in User, for example ‘Groceries’, you would make a new, similar function but called <code class="highlighter-rouge">deleteGroceriesOfUsers</code> and which would take the parameter <code class="highlighter-rouge">user</code> and delete all of the groceries that that user referenced. Then, directly after this code block:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">user</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">user</span><span class="p">)</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">`User ith username </span><span class="p">${</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">username</span><span class="p">}</span><span class="s2"> does not exist`</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">user</span><span class="p">;</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Add another <code class="highlighter-rouge">.then()</code> statement as so:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">deleteGroceriesOfUser</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">})</span>
+</code></pre></div></div>
+
+<p>Finally, at the end of the script, add this execution statement:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">parent</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">parseUsers</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">parseUsers</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">mongoose</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This checks to see if this code is being run by another script, which will be important for the <code class="highlighter-rouge">populate.js</code> script.</p>
+
+<h3 id="populate-script">Populate script</h3>
+
+<p>In your <code class="highlighter-rouge">scripts</code> folder, add a file titled <code class="highlighter-rouge">populate.js</code>. Add the following <code class="highlighter-rouge">require</code> block to the beginning of your code:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">readline</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'readline'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../db'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../models/user'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>If you were to add another model to the populate script, you would add its <code class="highlighter-rouge">require</code> reference here. Then, add the <code class="highlighter-rouge">parseUsers</code> function:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">parseUsers</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">mongoTransactions</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kd">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="kd">const</span> <span class="nx">userRl</span> <span class="o">=</span> <span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span>
+    <span class="na">input</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">__dirname</span><span class="p">}</span><span class="s2">/../DatabaseTestFiles/UserTest.json`</span><span class="p">),</span>
+  <span class="p">});</span>
+  <span class="nx">userRl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'line'</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+    <span class="nx">mongoTransactions</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+      <span class="nx">user</span><span class="p">.</span><span class="nx">save</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">doc</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">users</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">doc</span><span class="p">);</span>
+      <span class="p">}).</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Created user with username </span><span class="p">${</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">username</span><span class="p">}</span><span class="s2">`</span><span class="p">))</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Error saving user to database: </span><span class="p">${</span><span class="nx">err</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+      <span class="p">})</span>
+    <span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This function goes line-by-line through the database test file and creates a new document for each.</p>
+
+<p>If you wanted to reference another model in User, for example ‘Groceries’, you would make a new, similar function but called <code class="highlighter-rouge">parseGroceries</code> and which would take the parameter <code class="highlighter-rouge">users</code>. Then, append the following code inside of the <code class="highlighter-rouge">parseUsers</code> function:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">userRl</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'close'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">mongoTransactions</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">parseGroceries</span><span class="p">(</span><span class="nx">users</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Finally, at the end of your code, add this statement:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">require</span><span class="p">(</span><span class="s1">'./unpopulate'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">parseUsers</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>This makes sure that the database is depopulated before repopulating it.</p>
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

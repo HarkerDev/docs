@@ -1,0 +1,18 @@
+title: Harker Dev Documentation
+description: Documentation for The Harker Development Team
+baseurl: "/docs" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+permalink: pretty
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
+
+# Enable or disable the site search
+search_enabled: true
+
+# Aux links for the upper right navigation
+aux_links:
+  "View our Organization on Github":
+    - "//github.com/harkerdev"
+
+# Color scheme currently only supports "dark" or nil (default)
+color_scheme: nil

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Front End Development Practices - Harker Dev Documentation</title>
+  <link rel="stylesheet" href="http://localhost:4000/docs/assets/css/just-the-docs.css">
+  
+  <script type="text/javascript" src="http://localhost:4000/docs/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/docs/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <a href="http://localhost:4000/docs" class="site-title fs-6 lh-tight">Harker Dev Documentation</a>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <div class="navigation main-nav js-main-nav">
+        <nav>
+  <ul class="navigation-list">
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/" class="navigation-list-link">Home</a>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/contribution" class="navigation-list-link">Contribution</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/contribution/github/" class="navigation-list-link">GitHub Contributions</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/contribution/creating-mainting-project/" class="navigation-list-link">Developing a Project</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item active">
+            
+            <a href="http://localhost:4000/docs/frontend" class="navigation-list-link">Front End Development</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/add-page/" class="navigation-list-link">Adding a Page to Node.js Apps</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/reference-partial-page/" class="navigation-list-link">Referencing a Partial Page</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item  active">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/frontend-dev/" class="navigation-list-link active">Front End Development Practices</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/backend" class="navigation-list-link">Back End Development</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/mongodb-access-with-compass/" class="navigation-list-link">Access MongoDB with Compass</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/test-files-database/" class="navigation-list-link">Populate Database w/ Test Files</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/setting-up-a-server/" class="navigation-list-link">Setting Up A Server</a>
+                      
+                    </li>
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/mongodb-backup/" class="navigation-list-link">MongoDB Backup</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+  </ul>
+</nav>
+
+      </div>
+      <footer role="contentinfo" class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-0">Feel free to reach out to us at <a href="mailto:dev@harker.org">dev@harker.org</a>.</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap">
+      <div class="page-header">
+        <div class="main-content">
+          
+          <div class="search js-search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" placeholder="Search Harker Dev Documentation" aria-label="Search Harker Dev Documentation" autocomplete="off">
+              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+            <ul class="list-style-none text-small mt-md-1 mb-md-1 pb-4 pb-md-0 js-aux-nav aux-nav">
+              
+                <li class="d-inline-block my-0"><a href="//github.com/harkerdev">View our Organization on Github</a></li>
+              
+            </ul>
+          
+        </div>
+      </div>
+      <div class="main-content">
+        
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                  <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/docs/frontend">Front End Development</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><span>Front End Development Practices</span></li>
+              </ol>
+            </nav>
+          
+        
+        <div class="page-content">
+          <h2 id="placement-and-external-referencing">Placement and External Referencing</h2>
+
+<p>Front-end development takes place <em>solely</em> in the views and static folders.</p>
+
+<h3 id="views">Views</h3>
+
+<p>In <code class="highlighter-rouge">views</code>, there should be two subfolders: <code class="highlighter-rouge">pages</code> and <code class="highlighter-rouge">partials</code>. <code class="highlighter-rouge">pages</code> should only store <code class="highlighter-rouge">.ejs</code> files that are not going to be included in other pages. <code class="highlighter-rouge">partials</code> should only store <code class="highlighter-rouge">.ejs</code> files that are going to be reused in files in the <code class="highlighter-rouge">pages</code> folder.</p>
+
+<h3 id="static">Static</h3>
+
+<p>In <code class="highlighter-rouge">static</code>, there may be many folders, including <code class="highlighter-rouge">css</code>, <code class="highlighter-rouge">js</code>, <code class="highlighter-rouge">img</code>, <code class="highlighter-rouge">fonts</code>, and so on. Any non-ejs file that is to be referenced in the ejs files. As should be obvious, stylesheets belong in <code class="highlighter-rouge">css</code>, javascript scripts belong in <code class="highlighter-rouge">js</code>, images belong in <code class="highlighter-rouge">img</code>, and fonts belong in <code class="highlighter-rouge">fonts</code>. Any static file should be stored in <code class="highlighter-rouge">static</code>. A purely html file that is not dynamic could potentially be stored in <code class="highlighter-rouge">static</code>.</p>
+
+<p>Any stylesheet or script that will be used multiple times should be stored in these folders. Otherwise, it can be stored within the ejs file itself.</p>
+
+<p>Since static should be hosted at <code class="highlighter-rouge">/</code>, to access a static file, the <code class="highlighter-rouge">src</code> or <code class="highlighter-rouge">href</code> should be <code class="highlighter-rouge">/</code> + the relative location of the file to the <code class="highlighter-rouge">static</code> folder.</p>
+
+<h3 id="references">References</h3>
+
+<h4 id="javascript">JavaScript</h4>
+
+<p>Scripts must have a certain order in order to function properly. For example, any javascript that requires <code class="highlighter-rouge">jquery</code> must be run after the <code class="highlighter-rouge">jquery</code> script has finished. This can be accomplished be either placing the script after the <code class="highlighter-rouge">jquery</code> script or by adding a <code class="highlighter-rouge">defer</code> attribute.</p>
+
+<p>Scripts that are used multiple times (i.e. external scripts) generally should be placed in the <code class="highlighter-rouge">&lt;head&gt;</code>, accounting for the order that allows for the scripts to run properly (e.g. placing jquery before Materialize, and then a script that references Materialize after the Materialize script). Scripts that are defined within the file should be placed in the <code class="highlighter-rouge">&lt;body&gt;</code>.</p>
+
+<h4 id="css">CSS</h4>
+
+<p>Generally, all styling should either be placed in an external stylesheet or within a <code class="highlighter-rouge">&lt;style&gt;</code> tag in the <code class="highlighter-rouge">&lt;head&gt;</code>. CSS that is specific to that page only should be placed in a <code class="highlighter-rouge">&lt;style&gt;</code>, while CSS that may be used in other pages as well should be placed in an external stylesheet (in <code class="highlighter-rouge">static</code>). <code class="highlighter-rouge">style</code> attributes should not be used; instead, those elements should be given either an <code class="highlighter-rouge">id</code> or <code class="highlighter-rouge">class</code> which has style defined either in an external stylesheet or <code class="highlighter-rouge">&lt;style&gt;</code> tag.</p>
+
+<h3 id="ejs-includes">EJS Includes</h3>
+
+<p>At HarkerDev, we only use <code class="highlighter-rouge">include</code> to include files from <code class="highlighter-rouge">views/partials</code>. If you are going to use a medium-to-large sized chunk of HTML multiple times, make a custom partial and <code class="highlighter-rouge">include</code> it. If the chunk of HTML is a <code class="highlighter-rouge">&lt;style&gt;</code> or <code class="highlighter-rouge">&lt;script&gt;</code> tag, do not use includes, but rather an external stylesheet or script.</p>
+
+<h2 id="commenting">Commenting</h2>
+
+<h3 id="html">HTML</h3>
+
+<p>In large chunks of HTML, have a starting tag describing the chunk, and then another comment closing the chunk with the selector, like so:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- This does something --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">".selector"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- This does another thing --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">".something-else"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- A lotttt of code --&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.something-else --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.selector --&gt;</span>
+</code></pre></div></div>
+
+<h3 id="javascript-1">JavaScript</h3>
+
+<p>When defining variables, please try to make the variable name self-explaining. In addition, leave a comment next to it briefly describing its purpose like so:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">interval</span> <span class="o">=</span> <span class="mi">50</span>        <span class="c1">// the interval for the setInterval() function used by the countdown timer</span>
+<span class="kd">var</span> <span class="nx">isDisplaying</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// whether the page is currently displaying</span>
+</code></pre></div></div>
+
+<p>As shown above, if variables are set in blocks, align the comments for a nicer aesthetic. If your comment uses the word ‘whether’ for a boolean, make sure that the comment aligns with your boolean; if the condition set after the word ‘whether’ is true, your variable should be equal to <code class="highlighter-rouge">true</code>. Never say ‘whether or not’.</p>
+
+<p>Before functions, add a comment describing the purpose and/or the action of the function right before it. If it is long, add some comments describing different parts of the function:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+  does something
+
+  param   - whether to do something
+  another - number describing something else
+
+  returns a float which means something
+*/</span>
+<span class="kd">function</span> <span class="nx">something</span><span class="p">(</span><span class="nx">param</span><span class="p">,</span> <span class="nx">another</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// first does a thing</span>
+  <span class="c1">// then another thing</span>
+  <span class="c1">// finally does this</span>
+  <span class="k">return</span> <span class="nx">x</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you got the code off of another website, make sure to link them in the comment:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+ https://stackoverflow.com/questions/123456/does-this-really-cool-thing
+ does a really cool thing
+*/</span>
+<span class="kd">function</span> <span class="nx">something</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// first does a thing</span>
+  <span class="c1">// then another thing</span>
+  <span class="c1">// finally does this</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Also, try to comment before calling functions with callback, like so:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// after doing x, does y</span>
+<span class="nx">funcWithCB</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// first does a thing</span>
+  <span class="c1">// then another thing</span>
+  <span class="c1">// finally does this</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Unless it is obvious, like the <code class="highlighter-rouge">jquery's $(document).ready(callback)</code> function, which can abbreviated to <code class="highlighter-rouge">$(callback)</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// first does a thing</span>
+  <span class="c1">// then another thing</span>
+  <span class="c1">// finally does this</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>Long explanations are not needed, and functions should be generally self-descriptive. Function names should not be more than 15 characters, and abbreviations can be used as long as comments are added with the full name.</p>
+
+<p>Put a single blank line in between blocks of code for easier reading.</p>
+
+<h3 id="css-1">CSS</h3>
+
+<p>Generally, comments should not be used except to separate CSS into different sections. Otherwise, selectors should be completely self descriptive, while using abbreviations (such as <code class="highlighter-rouge">btn</code> instead of <code class="highlighter-rouge">button</code>). Selectors use hyphens (<code class="highlighter-rouge">-</code>) to separate different words (e.g. <code class="highlighter-rouge">sm-btn</code> for <code class="highlighter-rouge">small button</code>).</p>
+
+<h2 id="indentation">Indentation</h2>
+
+<p>If using Atom as the editor, the Auto Indent feature should handle everything. If a line is too wide (longer than the width of the screen, or 100 characters), then it should be split into multiple lines.</p>
+
+<h2 id="ajax-vs-ejs-printing">AJAX vs. EJS printing</h2>
+
+<p>EJS allows developers to display information on the front-end from the back-end without using AJAX. You can access other partials by using <code class="highlighter-rouge">include</code>. You can insert any information from <code class="highlighter-rouge">res.locals</code> or <code class="highlighter-rouge">app.locals</code> by using the <code class="highlighter-rouge">&lt;%-</code> and <code class="highlighter-rouge">&lt;%=</code> tags. For more information on how to use ejs, <a href="http://ejs.co/">view their tutorial</a>.</p>
+
+<p>Whether to use an AJAX request or use EJS to display information is a decision to be made by the team working on that part of the site (including backend and frontend). Using an AJAX request allows for a more developed REST API, but using EJS is more simple. If a request for information is commonly used throughout pages, making an API route may be the better option. However, if data is specific to the page, and does not change often, using EJS may be better. That being said, the decision requires a strong communication between the back-end and front-end developers.</p>
+
+<p>An example of a good time to use EJS is when generating a PDF, or a page designed to be printed. That way, the page is ready to be printed immediately after rendering, rather than having to wait for an AJAX request to finish.</p>
+
+<p>An example of a good time to use AJAX is when data is often refreshed, such as a user’s data, or if that data needs to be modified.</p>
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

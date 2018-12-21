@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Access MongoDB with Compass - Harker Dev Documentation</title>
+  <link rel="stylesheet" href="http://localhost:4000/docs/assets/css/just-the-docs.css">
+  
+  <script type="text/javascript" src="http://localhost:4000/docs/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="http://localhost:4000/docs/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+  <div class="page-wrap">
+    <div class="side-bar">
+      <a href="http://localhost:4000/docs" class="site-title fs-6 lh-tight">Harker Dev Documentation</a>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <div class="navigation main-nav js-main-nav">
+        <nav>
+  <ul class="navigation-list">
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/" class="navigation-list-link">Home</a>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/contribution" class="navigation-list-link">Contribution</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/contribution/github/" class="navigation-list-link">GitHub Contributions</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/contribution/creating-mainting-project/" class="navigation-list-link">Developing a Project</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+          <li class="navigation-list-item">
+            
+            <a href="http://localhost:4000/docs/frontend" class="navigation-list-link">Front End Development</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/add-page/" class="navigation-list-link">Adding a Page to Node.js Apps</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/reference-partial-page/" class="navigation-list-link">Referencing a Partial Page</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/front-end/frontend-dev/" class="navigation-list-link">Front End Development Practices</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="navigation-list-item active">
+            
+            <a href="http://localhost:4000/docs/backend" class="navigation-list-link">Back End Development</a>
+            
+              
+              <ul class="navigation-list-child-list ">
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item  active">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/mongodb-access-with-compass/" class="navigation-list-link active">Access MongoDB with Compass</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/test-files-database/" class="navigation-list-link">Populate Database w/ Test Files</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+                  
+                
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/setting-up-a-server/" class="navigation-list-link">Setting Up A Server</a>
+                      
+                    </li>
+                  
+                
+                  
+                    <li class="navigation-list-item ">
+                      
+                      <a href="http://localhost:4000/docs/docs/back-end/mongodb-backup/" class="navigation-list-link">MongoDB Backup</a>
+                      
+                    </li>
+                  
+                
+                  
+                
+              </ul>
+            
+          </li>
+        
+      
+    
+  </ul>
+</nav>
+
+      </div>
+      <footer role="contentinfo" class="site-footer">
+        <p class="text-small text-grey-dk-000 mb-0">Feel free to reach out to us at <a href="mailto:dev@harker.org">dev@harker.org</a>.</p>
+      </footer>
+    </div>
+    <div class="main-content-wrap">
+      <div class="page-header">
+        <div class="main-content">
+          
+          <div class="search js-search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input" placeholder="Search Harker Dev Documentation" aria-label="Search Harker Dev Documentation" autocomplete="off">
+              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          
+          
+            <ul class="list-style-none text-small mt-md-1 mb-md-1 pb-4 pb-md-0 js-aux-nav aux-nav">
+              
+                <li class="d-inline-block my-0"><a href="//github.com/harkerdev">View our Organization on Github</a></li>
+              
+            </ul>
+          
+        </div>
+      </div>
+      <div class="main-content">
+        
+          
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                
+                  <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/docs/backend">Back End Development</a></li>
+                
+                <li class="breadcrumb-nav-list-item"><span>Access MongoDB with Compass</span></li>
+              </ol>
+            </nav>
+          
+        
+        <div class="page-content">
+          <p>HarkerDev projects often (if not always) use MongoDB as the main database system. This guide will explain how to use MongoDB’s GUI to access the database directly.</p>
+
+<h2 id="installing-mongodb-compass">Installing MongoDB Compass</h2>
+
+<h3 id="mongodb">MongoDB</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>First, make sure that mongodb is installed and running <code class="highlighter-rouge">mongod</code> on the device you wish to connect to. This setup is detailed in our guide on [[Setting Up a Server</td>
+      <td>https://harkerdev.github.io/backend/setting-up-a-server]].</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="compass">Compass</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Then, [[install MongoDB Compass</td>
+      <td>https://www.mongodb.com/download-center?filter=enterprise#compass]] on the device you are using to connect.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="using-mongodb-compass">Using MongoDB Compass</h2>
+
+<h3 id="opening-mongodb-compass">Opening MongoDB Compass</h3>
+
+<p>MongoDB Compass runs as an application on your computer, so once you download it, open it (and move it to the Applications folder if applicable).</p>
+
+<h3 id="connecting-to-server">Connecting to server</h3>
+
+<p>Unless specified, most HarkerDev projects run on the default ports. This way, hostname, port, authentication, and replica set name do not have to be specified. To connect to a new server, click ‘New Connection’ on the left side of the interface.</p>
+
+<h4 id="connecting-to-local-server">Connecting to local server</h4>
+
+<p>If you are connecting to a MongoDB instance running on the same computer as the one accessing it, then no other fields have to be specified. Click ‘Connect’ to start the connection.</p>
+
+<h4 id="connecting-to-remote-server">Connecting to remote server</h4>
+
+<p>If you are connecting to a remote server, under the SSH Tunnel field, select ‘Use Password’. Then, enter the following:</p>
+
+<ul>
+  <li>Domain (or IP Address) of the server in the ‘SSH Hostname’ field</li>
+  <li>Server login username in the ‘SSH Username’ field</li>
+  <li>Server login password in the ‘SSH Password’ field</li>
+</ul>
+
+<p>Once these fields are filled in, click ‘Connect’.</p>
+
+<p>For context, the SSH Tunnel first connects into the server through SSH then connects to the MongoDB server locally. This does NOT connect to the MongoDB port but rather the SSH port.</p>
+
+<h4 id="adding-to-favorites">Adding to favorites</h4>
+
+<p>If you plan on often connecting to the MongoDB, you can make a favorite so that you do not have to fill in the fields every time you wish to connect to the server. To do this, fill in all the necessary fields but do not click ‘Connect’. In the ‘Favorite Name’ field, fill in the name to refer to the server that you are connecting to. Then, click ‘Create Favorite’.</p>
+
+<h3 id="using-the-gui">Using the GUI</h3>
+
+<p>Once logged in, you have the ability to interface with the databases on the specified server.</p>
+
+<h4 id="connecting-to-a-database">Connecting to a Database</h4>
+
+<p>On the left side, there will be a list of databases that are hosted on the server. Usually on production servers,  only one main database will be used, with a name often similar to the application name (e.g. Course Planner =&gt; <code class="highlighter-rouge">courseplanner</code>). To access that database, click on it.</p>
+
+<h4 id="viewing-a-collection">Viewing a Collection</h4>
+
+<p>Under the database you are connected to, a list of collections should appear. To begin, click on the name of the collection you wish to manipulate.</p>
+
+<h4 id="filtering-a-collection">Filtering a Collection</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>To filter a collection, use the filter at the top of the GUI. MongoDB has [[their own tutorial</td>
+      <td>https://docs.mongodb.com/v3.2/tutorial/query-documents/]] on queries, but here are a few examples:</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="syntax">Syntax</h5>
+
+<p>To filter the collection to documents that only have a property with a certain value, enter <code class="highlighter-rouge">{ "&lt;property&gt;": "&lt;value&gt;" }</code> into the filter, replacing <code class="highlighter-rouge">&lt;property&gt;</code> with the property and <code class="highlighter-rouge">&lt;value&gt;</code> with the value. For example, to query documents which have the <code class="highlighter-rouge">username</code> property set to <code class="highlighter-rouge">19johnd</code>, use the query:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19johnd"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h5 id="or-query"><code class="highlighter-rouge">or</code> Query</h5>
+
+<p>To have a filter which queries documents which <em>EITHER</em> have <code class="highlighter-rouge">property1</code> set to <code class="highlighter-rouge">value1</code> <em>OR</em> <code class="highlighter-rouge">property2</code> set to <code class="highlighter-rouge">value2</code>, use the query:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="err">$or</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="s2">"property1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value1"</span><span class="w"> </span><span class="p">},</span><span class="w"> 
+  </span><span class="p">{</span><span class="w"> </span><span class="s2">"property2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value2"</span><span class="w"> </span><span class="p">},</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre></div></div>
+
+<h5 id="and-query"><code class="highlighter-rouge">and</code> Query</h5>
+
+<p>To have a filter which queries documents which <em>BOTH</em> have <code class="highlighter-rouge">property1</code> set to <code class="highlighter-rouge">value1</code> <em>AND</em> <code class="highlighter-rouge">property2</code> set to <code class="highlighter-rouge">value2</code>, use the query:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="err">$and</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w"> </span><span class="s2">"property1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value1"</span><span class="w"> </span><span class="p">},</span><span class="w"> 
+  </span><span class="p">{</span><span class="w"> </span><span class="s2">"property2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value2"</span><span class="w"> </span><span class="p">},</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre></div></div>
+
+<h5 id="objectid-query">ObjectId Query</h5>
+
+<p>MongoDB’s ObjectId’s are be used to give a unique id to a document. They are usually either the value of the <code class="highlighter-rouge">_id</code> field or the value of a field which references other documents. To query documents which have the <code class="highlighter-rouge">_id</code> property set to ObjectId(“5b1d”), use the query:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$oid</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b1d"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="manipulating-a-document">Manipulating a document</h4>
+
+<p>Once documents are filtered, you can hover over a document for options (in the top right corner of the document). Compass allows you to edit the document (pencil icon) duplicate the document (multiple windows icon) or delete the document (trash bin icon).</p>
+
+<h5 id="editing-a-fields">Editing a fields</h5>
+
+<p>When editing a document, Compass allows allows you to modify fields. When hovering over a field, you can click on the value to allow you to edit that field.</p>
+
+<h5 id="addingremoving-fields">Adding/removing fields</h5>
+
+<p>To delete a field, click the ‘x’ icon on the left side of the row. To add a field, click on the ‘+’ icon on the left side of any row to add a field after it.</p>
+
+<h3 id="more-information">More information</h3>
+
+<p>For more information, visit <a href="https://docs.mongodb.com/compass/master/">MongoDB’s official Compass tutorial</a>.</p>
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
