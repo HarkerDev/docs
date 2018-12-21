@@ -291,15 +291,15 @@
           
         
         <div class="page-content">
-          <h2 id="placement-and-external-referencing">Placement and External Referencing</h2>
+          <h1 id="placement-and-external-referencing">Placement and External Referencing</h1>
 
 <p>Front-end development takes place <em>solely</em> in the views and static folders.</p>
 
-<h3 id="views">Views</h3>
+<h2 id="views">Views</h2>
 
 <p>In <code class="highlighter-rouge">views</code>, there should be two subfolders: <code class="highlighter-rouge">pages</code> and <code class="highlighter-rouge">partials</code>. <code class="highlighter-rouge">pages</code> should only store <code class="highlighter-rouge">.ejs</code> files that are not going to be included in other pages. <code class="highlighter-rouge">partials</code> should only store <code class="highlighter-rouge">.ejs</code> files that are going to be reused in files in the <code class="highlighter-rouge">pages</code> folder.</p>
 
-<h3 id="static">Static</h3>
+<h2 id="static">Static</h2>
 
 <p>In <code class="highlighter-rouge">static</code>, there may be many folders, including <code class="highlighter-rouge">css</code>, <code class="highlighter-rouge">js</code>, <code class="highlighter-rouge">img</code>, <code class="highlighter-rouge">fonts</code>, and so on. Any non-ejs file that is to be referenced in the ejs files. As should be obvious, stylesheets belong in <code class="highlighter-rouge">css</code>, javascript scripts belong in <code class="highlighter-rouge">js</code>, images belong in <code class="highlighter-rouge">img</code>, and fonts belong in <code class="highlighter-rouge">fonts</code>. Any static file should be stored in <code class="highlighter-rouge">static</code>. A purely html file that is not dynamic could potentially be stored in <code class="highlighter-rouge">static</code>.</p>
 
@@ -307,25 +307,25 @@
 
 <p>Since static should be hosted at <code class="highlighter-rouge">/</code>, to access a static file, the <code class="highlighter-rouge">src</code> or <code class="highlighter-rouge">href</code> should be <code class="highlighter-rouge">/</code> + the relative location of the file to the <code class="highlighter-rouge">static</code> folder.</p>
 
-<h3 id="references">References</h3>
+<h2 id="references">References</h2>
 
-<h4 id="javascript">JavaScript</h4>
+<h3 id="javascript">JavaScript</h3>
 
 <p>Scripts must have a certain order in order to function properly. For example, any javascript that requires <code class="highlighter-rouge">jquery</code> must be run after the <code class="highlighter-rouge">jquery</code> script has finished. This can be accomplished be either placing the script after the <code class="highlighter-rouge">jquery</code> script or by adding a <code class="highlighter-rouge">defer</code> attribute.</p>
 
 <p>Scripts that are used multiple times (i.e. external scripts) generally should be placed in the <code class="highlighter-rouge">&lt;head&gt;</code>, accounting for the order that allows for the scripts to run properly (e.g. placing jquery before Materialize, and then a script that references Materialize after the Materialize script). Scripts that are defined within the file should be placed in the <code class="highlighter-rouge">&lt;body&gt;</code>.</p>
 
-<h4 id="css">CSS</h4>
+<h3 id="css">CSS</h3>
 
 <p>Generally, all styling should either be placed in an external stylesheet or within a <code class="highlighter-rouge">&lt;style&gt;</code> tag in the <code class="highlighter-rouge">&lt;head&gt;</code>. CSS that is specific to that page only should be placed in a <code class="highlighter-rouge">&lt;style&gt;</code>, while CSS that may be used in other pages as well should be placed in an external stylesheet (in <code class="highlighter-rouge">static</code>). <code class="highlighter-rouge">style</code> attributes should not be used; instead, those elements should be given either an <code class="highlighter-rouge">id</code> or <code class="highlighter-rouge">class</code> which has style defined either in an external stylesheet or <code class="highlighter-rouge">&lt;style&gt;</code> tag.</p>
 
-<h3 id="ejs-includes">EJS Includes</h3>
+<h2 id="ejs-includes">EJS Includes</h2>
 
 <p>At HarkerDev, we only use <code class="highlighter-rouge">include</code> to include files from <code class="highlighter-rouge">views/partials</code>. If you are going to use a medium-to-large sized chunk of HTML multiple times, make a custom partial and <code class="highlighter-rouge">include</code> it. If the chunk of HTML is a <code class="highlighter-rouge">&lt;style&gt;</code> or <code class="highlighter-rouge">&lt;script&gt;</code> tag, do not use includes, but rather an external stylesheet or script.</p>
 
-<h2 id="commenting">Commenting</h2>
+<h1 id="commenting">Commenting</h1>
 
-<h3 id="html">HTML</h3>
+<h2 id="html">HTML</h2>
 
 <p>In large chunks of HTML, have a starting tag describing the chunk, and then another comment closing the chunk with the selector, like so:</p>
 
@@ -339,7 +339,7 @@
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.selector --&gt;</span>
 </code></pre></div></div>
 
-<h3 id="javascript-1">JavaScript</h3>
+<h2 id="javascript-1">JavaScript</h2>
 
 <p>When defining variables, please try to make the variable name self-explaining. In addition, leave a comment next to it briefly describing its purpose like so:</p>
 
@@ -403,15 +403,15 @@
 
 <p>Put a single blank line in between blocks of code for easier reading.</p>
 
-<h3 id="css-1">CSS</h3>
+<h2 id="css-1">CSS</h2>
 
 <p>Generally, comments should not be used except to separate CSS into different sections. Otherwise, selectors should be completely self descriptive, while using abbreviations (such as <code class="highlighter-rouge">btn</code> instead of <code class="highlighter-rouge">button</code>). Selectors use hyphens (<code class="highlighter-rouge">-</code>) to separate different words (e.g. <code class="highlighter-rouge">sm-btn</code> for <code class="highlighter-rouge">small button</code>).</p>
 
-<h2 id="indentation">Indentation</h2>
+<h1 id="indentation">Indentation</h1>
 
 <p>If using Atom as the editor, the Auto Indent feature should handle everything. If a line is too wide (longer than the width of the screen, or 100 characters), then it should be split into multiple lines.</p>
 
-<h2 id="ajax-vs-ejs-printing">AJAX vs. EJS printing</h2>
+<h1 id="ajax-vs-ejs-printing">AJAX vs. EJS printing</h1>
 
 <p>EJS allows developers to display information on the front-end from the back-end without using AJAX. You can access other partials by using <code class="highlighter-rouge">include</code>. You can insert any information from <code class="highlighter-rouge">res.locals</code> or <code class="highlighter-rouge">app.locals</code> by using the <code class="highlighter-rouge">&lt;%-</code> and <code class="highlighter-rouge">&lt;%=</code> tags. For more information on how to use ejs, <a href="http://ejs.co/">view their tutorial</a>.</p>
 

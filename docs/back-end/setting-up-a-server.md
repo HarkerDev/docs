@@ -7,27 +7,27 @@ nav_order: 3
 
 You'll be writing code for two different environments: development and production. The production environment is the server. The stuff on it should be free of errors, and ideally you don't want to be testing anything in production. The development environment is what you run on your machine. You should ideally test your changes in your development environment before deploying them to production.
 
-## Development
+# Development
 
 Because you'll be the only one testing the application locally on your computer (or maybe somehow you could involve a few others), it is enough to only utilize one core of your machine and not worry about the application's response to load. For that reason, getting things set up locally doesn't involve too much.
 
-### Installation
+## Installation
 
-#### 1. Git
+### 1. Git
 
 In order to clone the repository you'll need Git installed. There are a million guides (maybe not quite a million, but a good amount) on the internet on how to do this. [Here is one such guide.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) If you're on Windows, want to use the command line, want to clone over https, and want to use Two Factor Authentication for GitHub you'll also want to use [Microsoft's Git Credential Manger for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows]). Oh yeah and if you don't want to use git's command line client (which is very powerful), there are various GUIs built for it, one such being [GitHub Desktop](https://desktop.github.com/).
 
-#### 2. Node.js
+### 2. Node.js
 
 In order to run the code you'll need Node.js (assuming we're using that as the programming language). Different projects will have different minimum versions depending on how long ago they were coded. If you don't know what version you'll need, consult with whoever set up the server for the project and see what version is on the server.
 
 There are different ways of handling multiple Node.js versions. One such way is to install [`n`](https://github.com/tj/n), an application for managing these different versions. Unfortunately this is not supported on Windows. However, given that Node.js is mostly backwards-compatible, you may be able to get by with installing the latest version. Just be aware of new features not available in the version being used for the project.
 
-#### 3. MongoDB
+### 3. MongoDB
 
 Most of our projects use MongoDB as a database. You can get that from [here](https://www.mongodb.com/download-center#community).
 
-### Running
+## Running
 
 1. Open Terminal. If on macOS, and enter the command `mongod` in a new Terminal window. If on Linux, enter the command `sudo service mongod start`. If on Windows, first create a new folder called data with a folder inside called db on your local disk (usually the C drive). Then run mongod.exe to launch the database. You can do this by opening command prompt and entering the path to the executable (by default it is `"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"`).
 
@@ -35,9 +35,9 @@ Most of our projects use MongoDB as a database. You can get that from [here](htt
 
 3. Open `http://localhost:<port>` in your browser, where `<port>` is the port specified in your config file.
 
-## Production
+# Production
 
-### Installing
+## Installing
 
 In the production environment since performance matters we use more software to help handle the load of many students accessing an application at once. This will be discussed below.
 
@@ -61,7 +61,7 @@ In the production environment since performance matters we use more software to 
 
     You can refer to [MongoDB's guide](https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/) for this.
 
-### Setup
+## Setup
 
 Nginx has two different directories for configuration: `/etc/nginx/sites-available/` and `/etc/nginx/sites-enabled/`. The configuration files are stored in `sites-available`, and they are symlinked (use `ln -s`) to `sites-enabled`. Grab a previous config file from `sites-available` (it's name will match the DNS name of the site), and put that in the same folder on the new server but with the appropriate name. You'll also want to copy over the files in `/etc/nginx/snippets`.
 
@@ -69,10 +69,10 @@ Then delete the default site symlink in `/etc/nginx/sites-available/` and symlin
 
 You'll also need to clone the repo into the home folder. You'll need to set up SSH Forwarding for this and to clone the repo over SSH.
 
-### Running
+## Running
 
 Use `sudo service mongod start` to start MongoDb, and `pm2 start app.js -i 0 --name "app"` (assuming `app.js` is the main file and you're in the directory you cloned) to start the main application for the first time. Later you can just use `pm2 start app`.
 
-### Backups
+## Backups
 
-Consider viewing [[this tutorial|https://github.com/DJMcoder/HarkerDevGuides/wiki/Creating-Backup-Procedures]] for an in-depth guide on creating a backup procedure.
+Consider viewing [this tutorial](https://github.com/DJMcoder/HarkerDevGuides/wiki/Creating-Backup-Procedures) for an in-depth guide on creating a backup procedure.

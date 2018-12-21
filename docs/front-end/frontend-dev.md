@@ -5,16 +5,15 @@ parent: Front End Development
 nav_order: 3
 ---
 
-
-## Placement and External Referencing
+# Placement and External Referencing
 
 Front-end development takes place *solely* in the views and static folders.
 
-### Views
+## Views
 
 In `views`, there should be two subfolders: `pages` and `partials`. `pages` should only store `.ejs` files that are not going to be included in other pages. `partials` should only store `.ejs` files that are going to be reused in files in the `pages` folder.
 
-### Static
+## Static
 
 In `static`, there may be many folders, including `css`, `js`, `img`, `fonts`, and so on. Any non-ejs file that is to be referenced in the ejs files. As should be obvious, stylesheets belong in `css`, javascript scripts belong in `js`, images belong in `img`, and fonts belong in `fonts`. Any static file should be stored in `static`. A purely html file that is not dynamic could potentially be stored in `static`.
 
@@ -22,25 +21,25 @@ Any stylesheet or script that will be used multiple times should be stored in th
 
 Since static should be hosted at `/`, to access a static file, the `src` or `href` should be `/` + the relative location of the file to the `static` folder.
 
-### References
+## References
 
-#### JavaScript
+### JavaScript
 
 Scripts must have a certain order in order to function properly. For example, any javascript that requires `jquery` must be run after the `jquery` script has finished. This can be accomplished be either placing the script after the `jquery` script or by adding a `defer` attribute.
 
 Scripts that are used multiple times (i.e. external scripts) generally should be placed in the `<head>`, accounting for the order that allows for the scripts to run properly (e.g. placing jquery before Materialize, and then a script that references Materialize after the Materialize script). Scripts that are defined within the file should be placed in the `<body>`.
 
-#### CSS
+### CSS
 
 Generally, all styling should either be placed in an external stylesheet or within a `<style>` tag in the `<head>`. CSS that is specific to that page only should be placed in a `<style>`, while CSS that may be used in other pages as well should be placed in an external stylesheet (in `static`). `style` attributes should not be used; instead, those elements should be given either an `id` or `class` which has style defined either in an external stylesheet or `<style>` tag.
 
-### EJS Includes
+## EJS Includes
 
 At HarkerDev, we only use `include` to include files from `views/partials`. If you are going to use a medium-to-large sized chunk of HTML multiple times, make a custom partial and `include` it. If the chunk of HTML is a `<style>` or `<script>` tag, do not use includes, but rather an external stylesheet or script.
 
-## Commenting
+# Commenting
 
-### HTML
+## HTML
 
 In large chunks of HTML, have a starting tag describing the chunk, and then another comment closing the chunk with the selector, like so:
 
@@ -55,7 +54,7 @@ In large chunks of HTML, have a starting tag describing the chunk, and then anot
 </div><!-- /.selector -->
 ````
 
-### JavaScript
+## JavaScript
 
 When defining variables, please try to make the variable name self-explaining. In addition, leave a comment next to it briefly describing its purpose like so:
 
@@ -124,15 +123,15 @@ Long explanations are not needed, and functions should be generally self-descrip
 
 Put a single blank line in between blocks of code for easier reading.
 
-### CSS
+## CSS
 
 Generally, comments should not be used except to separate CSS into different sections. Otherwise, selectors should be completely self descriptive, while using abbreviations (such as `btn` instead of `button`). Selectors use hyphens (`-`) to separate different words (e.g. `sm-btn` for `small button`).
 
-## Indentation
+# Indentation
 
 If using Atom as the editor, the Auto Indent feature should handle everything. If a line is too wide (longer than the width of the screen, or 100 characters), then it should be split into multiple lines.
 
-## AJAX vs. EJS printing
+# AJAX vs. EJS printing
 
 EJS allows developers to display information on the front-end from the back-end without using AJAX. You can access other partials by using `include`. You can insert any information from `res.locals` or `app.locals` by using the `<%-` and `<%=` tags. For more information on how to use ejs, [view their tutorial](http://ejs.co/).
 

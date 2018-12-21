@@ -293,27 +293,27 @@
         <div class="page-content">
           <p>You’ll be writing code for two different environments: development and production. The production environment is the server. The stuff on it should be free of errors, and ideally you don’t want to be testing anything in production. The development environment is what you run on your machine. You should ideally test your changes in your development environment before deploying them to production.</p>
 
-<h2 id="development">Development</h2>
+<h1 id="development">Development</h1>
 
 <p>Because you’ll be the only one testing the application locally on your computer (or maybe somehow you could involve a few others), it is enough to only utilize one core of your machine and not worry about the application’s response to load. For that reason, getting things set up locally doesn’t involve too much.</p>
 
-<h3 id="installation">Installation</h3>
+<h2 id="installation">Installation</h2>
 
-<h4 id="1-git">1. Git</h4>
+<h3 id="1-git">1. Git</h3>
 
 <p>In order to clone the repository you’ll need Git installed. There are a million guides (maybe not quite a million, but a good amount) on the internet on how to do this. <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Here is one such guide.</a> If you’re on Windows, want to use the command line, want to clone over https, and want to use Two Factor Authentication for GitHub you’ll also want to use <a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows]">Microsoft’s Git Credential Manger for Windows</a>. Oh yeah and if you don’t want to use git’s command line client (which is very powerful), there are various GUIs built for it, one such being <a href="https://desktop.github.com/">GitHub Desktop</a>.</p>
 
-<h4 id="2-nodejs">2. Node.js</h4>
+<h3 id="2-nodejs">2. Node.js</h3>
 
 <p>In order to run the code you’ll need Node.js (assuming we’re using that as the programming language). Different projects will have different minimum versions depending on how long ago they were coded. If you don’t know what version you’ll need, consult with whoever set up the server for the project and see what version is on the server.</p>
 
 <p>There are different ways of handling multiple Node.js versions. One such way is to install <a href="https://github.com/tj/n"><code class="highlighter-rouge">n</code></a>, an application for managing these different versions. Unfortunately this is not supported on Windows. However, given that Node.js is mostly backwards-compatible, you may be able to get by with installing the latest version. Just be aware of new features not available in the version being used for the project.</p>
 
-<h4 id="3-mongodb">3. MongoDB</h4>
+<h3 id="3-mongodb">3. MongoDB</h3>
 
 <p>Most of our projects use MongoDB as a database. You can get that from <a href="https://www.mongodb.com/download-center#community">here</a>.</p>
 
-<h3 id="running">Running</h3>
+<h2 id="running">Running</h2>
 
 <ol>
   <li>
@@ -327,9 +327,9 @@
   </li>
 </ol>
 
-<h2 id="production">Production</h2>
+<h1 id="production">Production</h1>
 
-<h3 id="installing">Installing</h3>
+<h2 id="installing">Installing</h2>
 
 <p>In the production environment since performance matters we use more software to help handle the load of many students accessing an application at once. This will be discussed below.</p>
 
@@ -361,7 +361,7 @@
   </li>
 </ol>
 
-<h3 id="setup">Setup</h3>
+<h2 id="setup">Setup</h2>
 
 <p>Nginx has two different directories for configuration: <code class="highlighter-rouge">/etc/nginx/sites-available/</code> and <code class="highlighter-rouge">/etc/nginx/sites-enabled/</code>. The configuration files are stored in <code class="highlighter-rouge">sites-available</code>, and they are symlinked (use <code class="highlighter-rouge">ln -s</code>) to <code class="highlighter-rouge">sites-enabled</code>. Grab a previous config file from <code class="highlighter-rouge">sites-available</code> (it’s name will match the DNS name of the site), and put that in the same folder on the new server but with the appropriate name. You’ll also want to copy over the files in <code class="highlighter-rouge">/etc/nginx/snippets</code>.</p>
 
@@ -369,20 +369,13 @@
 
 <p>You’ll also need to clone the repo into the home folder. You’ll need to set up SSH Forwarding for this and to clone the repo over SSH.</p>
 
-<h3 id="running-1">Running</h3>
+<h2 id="running-1">Running</h2>
 
 <p>Use <code class="highlighter-rouge">sudo service mongod start</code> to start MongoDb, and <code class="highlighter-rouge">pm2 start app.js -i 0 --name "app"</code> (assuming <code class="highlighter-rouge">app.js</code> is the main file and you’re in the directory you cloned) to start the main application for the first time. Later you can just use <code class="highlighter-rouge">pm2 start app</code>.</p>
 
-<h3 id="backups">Backups</h3>
+<h2 id="backups">Backups</h2>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Consider viewing [[this tutorial</td>
-      <td>https://github.com/DJMcoder/HarkerDevGuides/wiki/Creating-Backup-Procedures]] for an in-depth guide on creating a backup procedure.</td>
-    </tr>
-  </tbody>
-</table>
+<p>Consider viewing <a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Creating-Backup-Procedures">this tutorial</a> for an in-depth guide on creating a backup procedure.</p>
 
 
           

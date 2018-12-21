@@ -293,7 +293,7 @@
         <div class="page-content">
           <p>Testing often requires a populated database to work with. This tutorial explains how to write a write scripts which populate the database with test documents specified in files you will create.</p>
 
-<h2 id="setup">Setup</h2>
+<h1 id="setup">Setup</h1>
 
 <p>Make sure that MongoDB is set up and <code class="highlighter-rouge">mongod</code> is running. Review the structure of your collections. For this tutorial, we will be using users as our example, with the following schema:</p>
 
@@ -320,7 +320,7 @@
 </span><span class="err">module.exports</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">User;</span><span class="w">
 </span></code></pre></div></div>
 
-<h2 id="creating-db-test-files">Creating DB Test files</h2>
+<h1 id="creating-db-test-files">Creating DB Test files</h1>
 
 <p>In your repository folder, create a new folder titled <code class="highlighter-rouge">DatabaseTestFiles</code>. In this folder, create a new file called <code class="highlighter-rouge">UserTest.json</code>. Line by line, create a new instance of a user. Here is an example:</p>
 
@@ -330,15 +330,15 @@
 
 <p>Note the lack of commas between objects.</p>
 
-<h3 id="a-note-on-implementation">A Note on Implementation</h3>
+<h2 id="a-note-on-implementation">A Note on Implementation</h2>
 
 <p>We are only using a model with two String fields. More models and fields could be added in the same fashion. If a reference field is added, there are two possibilities that could be implemented. The first would be to generate the ids in the database test files, and then reference those ids them in the other document. The other would be to generate documents for both collections separately, then randomly pair them together (depending on the direction of the reference).</p>
 
-<h2 id="creating-scripts">Creating scripts</h2>
+<h1 id="creating-scripts">Creating scripts</h1>
 
 <p>If it does not already exist, add a folder to your repository folder titled <code class="highlighter-rouge">scripts</code>.</p>
 
-<h3 id="unpopulate-script">Unpopulate script</h3>
+<h2 id="unpopulate-script">Unpopulate script</h2>
 
 <p>In your <code class="highlighter-rouge">scripts</code> folder, add a file titled <code class="highlighter-rouge">unpopulate.js</code>.
 Add the following <code class="highlighter-rouge">require</code> block to the beginning of your code:</p>
@@ -405,7 +405,7 @@ Then, add the <code class="highlighter-rouge">parseUsers</code> function.</p>
 
 <p>This checks to see if this code is being run by another script, which will be important for the <code class="highlighter-rouge">populate.js</code> script.</p>
 
-<h3 id="populate-script">Populate script</h3>
+<h2 id="populate-script">Populate script</h2>
 
 <p>In your <code class="highlighter-rouge">scripts</code> folder, add a file titled <code class="highlighter-rouge">populate.js</code>. Add the following <code class="highlighter-rouge">require</code> block to the beginning of your code:</p>
 

@@ -293,9 +293,9 @@
         <div class="page-content">
           <p>This tutorial will guide you on how to add a new page to a node.js website.</p>
 
-<h2 id="creating-the-page">Creating the page</h2>
+<h1 id="creating-the-page">Creating the page</h1>
 
-<h3 id="adding-the-head">Adding the head</h3>
+<h2 id="adding-the-head">Adding the head</h2>
 
 <p>First, add the following code to the top of your page:</p>
 
@@ -310,7 +310,7 @@
 
 <p>If you want to add in a stylesheet, favicon, or <code class="highlighter-rouge">&lt;meta&gt;</code> tag, you would put it here in between the <code class="highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> tags.</p>
 
-<h3 id="referencing-partials">Referencing Partials</h3>
+<h2 id="referencing-partials">Referencing Partials</h2>
 
 <p>For information on how to reference a partial, <a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Referencing-a-Partial-Page">view this tutorial</a>.</p>
 
@@ -321,14 +321,7 @@
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%</span><span class="na">-</span> <span class="na">include</span><span class="err">('../</span><span class="na">partials</span><span class="err">/</span><span class="na">navbar</span><span class="err">.</span><span class="na">ejs</span><span class="err">')</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Then, there is the loader partial, which includes tools on making a full-screen page loader using [[materializecss’ preloader tool</td>
-      <td>http://materializecss.com/preloader.html]]. If you want to use the tools, include them as so:</td>
-    </tr>
-  </tbody>
-</table>
+<p>Then, there is the loader partial, which includes tools on making a full-screen page loader using <a href="http://materializecss.com/preloader.html">materializecss’ preloader tool</a>. If you want to use the tools, include them as so:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%</span><span class="na">-</span> <span class="na">include</span><span class="err">('../</span><span class="na">partials</span><span class="err">/</span><span class="na">loader</span><span class="err">.</span><span class="na">ejs</span><span class="err">')</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
@@ -338,7 +331,7 @@
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%</span><span class="na">-</span> <span class="na">include</span><span class="err">('../</span><span class="na">partials</span><span class="err">/</span><span class="na">orientation</span><span class="err">.</span><span class="na">ejs</span><span class="err">')</span> <span class="err">%</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
-<h3 id="adding-your-own-code">Adding your own code</h3>
+<h2 id="adding-your-own-code">Adding your own code</h2>
 
 <p>Add whatever page content that the page is intended to have. Note that the head include give you access to materializecss and jquery.</p>
 
@@ -348,7 +341,7 @@
 
 <p>In terms of code structure, <a href="https://github.com/DJMcoder/HarkerDevGuides/wiki/Front-End-Coding-Practices">view our tutorial on front-end coding structure and style</a>.</p>
 
-<h3 id="closing-the-page">Closing the page</h3>
+<h2 id="closing-the-page">Closing the page</h2>
 
 <p>Close the <code class="highlighter-rouge">&lt;body&gt;</code> and <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> tags as so:</p>
 
@@ -356,7 +349,7 @@
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<h2 id="adding-your-page-to-the-navbar">Adding your page to the navbar</h2>
+<h1 id="adding-your-page-to-the-navbar">Adding your page to the navbar</h1>
 
 <p>In <code class="highlighter-rouge">views/partials/navbar.ejs</code>, in both the <code class="highlighter-rouge">ul.side-nav</code> and the main <code class="highlighter-rouge">&lt;ul&gt;</code>, add a <code class="highlighter-rouge">&lt;li&gt;</code> with an <code class="highlighter-rouge">&lt;a&gt;</code> inside it, linking to the page you just made, as so:</p>
 
@@ -376,7 +369,7 @@
 
 <p>For more information on the navbar, <a href="http://materializecss.com/navbar.html">view the materializecss tutorial on navbars</a>.</p>
 
-<h2 id="adding-the-page-to-the-backend">Adding the page to the backend</h2>
+<h1 id="adding-the-page-to-the-backend">Adding the page to the backend</h1>
 
 <p>To add the page to the backend, add the following code to the main router:</p>
 

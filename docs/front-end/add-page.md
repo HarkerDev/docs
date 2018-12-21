@@ -7,9 +7,9 @@ nav_order: 1
 
 This tutorial will guide you on how to add a new page to a node.js website.
 
-## Creating the page
+# Creating the page
 
-### Adding the head
+## Adding the head
 
 First, add the following code to the top of your page:
 
@@ -25,19 +25,19 @@ First, add the following code to the top of your page:
 
 If you want to add in a stylesheet, favicon, or `<meta>` tag, you would put it here in between the `<head></head>` tags.
 
-### Referencing Partials
+## Referencing Partials
 
 For information on how to reference a partial, [view this tutorial](https://github.com/DJMcoder/HarkerDevGuides/wiki/Referencing-a-Partial-Page).
 
 For information on what the various partials do, [view this tutorial](https://github.com/DJMcoder/HarkerDevGuides/wiki/Using-the-Various-Partials).
 
-There are three main partial pages to include. The first is the navbar, which usually is the first thing after the `<body>` tag. You would include it as so: 
+There are three main partial pages to include. The first is the navbar, which usually is the first thing after the `<body>` tag. You would include it as so:
 
 ````html
 <%- include('../partials/navbar.ejs') %>
 ````
 
-Then, there is the loader partial, which includes tools on making a full-screen page loader using [[materializecss' preloader tool|http://materializecss.com/preloader.html]]. If you want to use the tools, include them as so:
+Then, there is the loader partial, which includes tools on making a full-screen page loader using [materializecss' preloader tool](http://materializecss.com/preloader.html). If you want to use the tools, include them as so:
 
 ````html
 <%- include('../partials/loader.ejs') %>
@@ -49,7 +49,7 @@ Finally, there is the orientation partial. This partial will force any mobile us
 <%- include('../partials/orientation.ejs') %>
 ````
 
-### Adding your own code
+## Adding your own code
 
 Add whatever page content that the page is intended to have. Note that the head include give you access to materializecss and jquery.
 
@@ -59,7 +59,7 @@ For information on how to use jquery, [view their documentation](http://api.jque
 
 In terms of code structure, [view our tutorial on front-end coding structure and style](https://github.com/DJMcoder/HarkerDevGuides/wiki/Front-End-Coding-Practices).
 
-### Closing the page
+## Closing the page
 
 Close the `<body>` and `<html>` tags as so:
 
@@ -68,7 +68,7 @@ Close the `<body>` and `<html>` tags as so:
 </html>
 ````
 
-## Adding your page to the navbar
+# Adding your page to the navbar
 
 In `views/partials/navbar.ejs`, in both the `ul.side-nav` and the main `<ul>`, add a `<li>` with an `<a>` inside it, linking to the page you just made, as so:
 
@@ -89,7 +89,7 @@ In `views/partials/navbar.ejs`, in both the `ul.side-nav` and the main `<ul>`, a
 
 For more information on the navbar, [view the materializecss tutorial on navbars](http://materializecss.com/navbar.html).
 
-## Adding the page to the backend
+# Adding the page to the backend
 
 To add the page to the backend, add the following code to the main router:
 
