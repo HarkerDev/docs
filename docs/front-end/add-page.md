@@ -5,7 +5,6 @@ parent: Front End Development
 nav_order: 1
 ---
 
-
 This tutorial will guide you on how to add a new page to a node.js website.
 
 ## Creating the page
@@ -88,12 +87,12 @@ In `views/partials/navbar.ejs`, in both the `ul.side-nav` and the main `<ul>`, a
 </nav>
 ````
 
-For more information on the navbar, [[view the materializecss tutorial on navbars|http://materializecss.com/navbar.html]].
+For more information on the navbar, [view the materializecss tutorial on navbars](http://materializecss.com/navbar.html).
 
 ## Adding the page to the backend
 
 To add the page to the backend, add the following code to the main router:
 
-{{< highlight js >}}
+````js
 router.get('/page', (req, res) => { res.render('pages/page.ejs') })
-{{< / highlight >}}
+````
